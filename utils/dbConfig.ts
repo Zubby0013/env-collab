@@ -1,7 +1,7 @@
 import { connect } from "mongoose";
-import env from "dotenv";
+import dotenv from "dotenv";
 
-env.config();
+dotenv.config();
 
 const URL: string = process.env.DATABASE_URL!;
 

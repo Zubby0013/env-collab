@@ -1,9 +1,9 @@
 import { Application, Request, Response } from "express";
-// import auth from "./router/userRouter";
+import auth from "./router/userRouter";
 
 export const mainApp = (app: Application) => {
   try {
-    // app.use("/api",auth)
+    app.use("/api",auth);
     app.get("/", (req: Request, res: Response) => {
       try {
         // console.log(req)
