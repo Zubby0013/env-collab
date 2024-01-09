@@ -29,3 +29,33 @@ export const createUser = async(req:Request, res:Response)=>{
         });
     }
 } ;
+
+export const viewOneUser = async(req:Request, res:Response)=>{
+    try {
+        const {userID} = req.params;
+    
+        const user = userModel.findById(userID);
+        return res.status(404).json({
+            message: " view user successfully",
+            data: user
+        });
+    } catch (error) {
+        return res.status(404).json({
+            message: "error while view one user"
+        });
+    }
+} ;
+
+export const viewAllUser = async(req:Request, res:Response)=>{
+    try {
+        const user = userModel.find();
+        return res.status(404).json({
+            message: " creating user successfully",
+            data: user
+        });
+    } catch (error) {
+        return res.status(404).json({
+            message: "error while creating user"
+        });
+    }
+} ;
