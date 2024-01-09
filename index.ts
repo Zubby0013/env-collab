@@ -13,9 +13,10 @@ app.use(cors());
 app.use(express.json());
 
 mainApp(app);
+
 const server = app.listen(port, () => {
   console.clear();
-  console.log("first");
+  console.log("");
   dbConfig();
 //   console.log(dbConfig())
 });
